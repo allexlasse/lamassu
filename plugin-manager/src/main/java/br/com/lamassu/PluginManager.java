@@ -1,12 +1,12 @@
 package br.com.lamassu;
 
-public class PluginWrapper {
+public class PluginManager {
     
     private final String name;
     private final Integer priority;
     private final Plugin plugin;
 
-    public PluginWrapper(String name, Integer priority, Plugin plugin) {
+    public PluginManager(String name, Integer priority, Plugin plugin) {
         this.name = name;
         this.priority = priority;
         this.plugin = plugin;
@@ -24,5 +24,4 @@ public class PluginWrapper {
         return plugin;
     }
 
-    
 }

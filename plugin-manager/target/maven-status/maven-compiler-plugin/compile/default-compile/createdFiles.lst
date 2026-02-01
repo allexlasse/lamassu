@@ -1,0 +1,8 @@
+br\com\lamassu\workers\WorkerManager.class
+br\com\lamassu\PluginExecution.class
+br\com\lamassu\workers\WorkerBuffer.class
+br\com\lamassu\PluginLoader.class
+br\com\lamassu\PluginManager.class
+br\com\lamassu\PluginExecutionWorker.class
+br\com\lamassu\workers\Worker.class
+br\com\lamassu\workers\WorkerProducer.class

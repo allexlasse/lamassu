@@ -20,7 +20,7 @@ public class PluginLoader {
     // Live reload
    
     private Properties props;
-    private CopyOnWriteArrayList<PluginWrapper> loadedPlugins;
+    private CopyOnWriteArrayList<PluginManager> loadedPlugins;
     private CopyOnWriteArraySet<Integer> loadedPluginsPriority;
 
     public PluginLoader(Properties props) throws FileNotFoundException, IOException {
@@ -57,7 +57,7 @@ public class PluginLoader {
         for (Plugin p : serviceLoader){
             String pluginName = p.getName();
             if(!pluginWasLoaded(pluginName)){
-                loadedPlugins.add(new PluginWrapper(pluginName, priority, p));
+                loadedPlugins.add(new PluginManager(pluginName, priority, p));
                 System.out.println("Loaded plugin " + pluginName);
             }
             System.out.println("Plugin was already loaded");
@@ -72,15 +72,15 @@ public class PluginLoader {
         return getPluginByName(name) != null;
     }
 
-    public PluginWrapper getPluginByName(String name){
+    public PluginManager getPluginByName(String name){
         return loadedPlugins.stream().filter(p -> p.getName().equals(name)).findFirst().orElse(null);
     }
 
-    public PluginWrapper getPluginByPriority(Integer priority){
+    public PluginManager getPluginByPriority(Integer priority){
         return loadedPlugins.stream().filter(p -> p.getPriority().equals(priority)).findFirst().orElse(null);
     }
 
-    public List<PluginWrapper> getAllPluginsWithPririty(Integer priority){
+    public List<PluginManager> getAllPluginsWithPririty(Integer priority){
         return loadedPlugins.stream().filter(p -> p.getPriority().equals(priority)).collect(Collectors.toList());
     }
 

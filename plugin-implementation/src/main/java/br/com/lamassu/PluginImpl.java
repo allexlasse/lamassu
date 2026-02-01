@@ -7,7 +7,13 @@ public class PluginImpl implements Plugin{
     }
 
     public void start() {
-        System.out.println("Executing from within a plugin... That rhimed!");
+        System.out.println("I'll assume this is the loading method");
     }
-    
+
+    @Override
+    public Message process(Message data) {
+        System.out.println("Processing message: " + data.getId());
+        System.out.println("Processing payload: " + data.getContent());
+        return data;
+    }
 }

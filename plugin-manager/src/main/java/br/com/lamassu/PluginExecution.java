@@ -38,9 +38,9 @@ public class PluginExecution {
                 pr.forEach(pri ->{
                     try {
                         //plugins
-                        List<PluginWrapper> pl = pluginLoader.getAllPluginsWithPririty(pri);
+                        List<PluginManager> pl = pluginLoader.getAllPluginsWithPririty(pri);
                         CountDownLatch latch = new CountDownLatch(pl.size());
-                        for(PluginWrapper pw : pl){
+                        for(PluginManager pw : pl){
                             Thread.ofVirtual().start(() -> {
                                 try{
                                     pw.getPlugin().start();

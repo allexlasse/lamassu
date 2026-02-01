@@ -4,9 +4,9 @@ public interface Plugin {
     
     public String getName();
 
-    default void load(){};
-
     public void start();
+
+    public Message process(Message data);
 
     default void stop(){};
 

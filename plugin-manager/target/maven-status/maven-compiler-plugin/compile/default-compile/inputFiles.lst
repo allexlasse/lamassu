@@ -1,2 +1,8 @@
-c:\Dev\Java\workspace\plugin-manager\src\main\java\br\com\lamassu\PluginLoader.java
-c:\Dev\Java\workspace\plugin-manager\src\main\java\br\com\lamassu\Test.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\PluginExecution.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\PluginExecutionWorker.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\PluginLoader.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\PluginManager.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\workers\Worker.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\workers\WorkerBuffer.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\workers\WorkerManager.java
+c:\Dev\Java\workspace\lamassu\plugin-manager\src\main\java\br\com\lamassu\workers\WorkerProducer.java
